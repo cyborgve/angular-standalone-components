@@ -1,1 +1,37 @@
 /* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+}
+
+th.mat-column-actions,
+td.mat-column-actions {
+  width: 180px;
+}
+
+th.mat-column-actions {
+  @apply text-center;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.file-title {
+  @apply mb-2 text-xl font-semibold text-primary;
+}
+
+.decorated-date {
+  @apply w-full pb-4 text-center;
+}
+
+.decorated-date-title {
+  @apply block text-xs opacity-70;
+}

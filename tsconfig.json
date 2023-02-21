@@ -1,8 +1,21 @@
 /* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
+
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "@auth/*": ["src/app/auth/*"],
+      "@core/*": ["src/app/core/*"],
+      "@shared/*": ["src/app/shared/*"],
+      "@entities/*": ["src/app/entities/*"],
+      "@pages/*": ["src/app/pages/*"],
+      "@assets/*": ["src/assets/*"],
+      "@environments/*": ["src/environments/*"]
+    },
+    "strictPropertyInitialization": false,
+    "resolveJsonModule": true,
+    "allowSyntheticDefaultImports": true,
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
@@ -19,10 +32,7 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
-    "lib": [
-      "ES2022",
-      "dom"
-    ]
+    "lib": ["ES2022", "dom"]
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

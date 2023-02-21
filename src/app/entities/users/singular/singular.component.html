@@ -1,0 +1,74 @@
+<mat-card class="p-4">
+  <form [formGroup]="singularForm">
+    <section class="grid grid-cols-4 col-span-8 gap-x-1">
+      <!-- Id attribute-->
+      <mat-form-field appearance="fill" class="w-3/4">
+        <mat-label>Id</mat-label>
+        <input
+          #id
+          type="text"
+          matInput
+          formControlName="id"
+          autocomplete="off"
+          autofocus="true" />
+      </mat-form-field>
+      <!-- Created date -->
+      <article class="decorated-date">
+        <span class="decorated-date-title">Created</span>
+        <span>{{ singularForm.value.created | date : 'medium' }}</span>
+      </article>
+      <!-- Modified date -->
+      <article class="decorated-date">
+        <span class="decorated-date-title">Modified</span>
+        <span>{{ singularForm.value.modified | date : 'medium' }}</span>
+      </article>
+      <!-- Title -->
+      <article class="text-center file-title">
+        {{ title + ' file' | titlecase }}
+      </article>
+      <!-- name -->
+      <mat-form-field appearance="fill" class="col-span-3">
+        <mat-label>Name</mat-label>
+        <input type="text" #nameElement matInput formControlName="name" />
+      </mat-form-field>
+      <!-- status -->
+      <mat-form-field appearance="fill">
+        <mat-label>Status</mat-label>
+        <mat-select formControlName="status">
+          <mat-option
+            *ngFor="let option of ['ENABLED', 'DISABLED']"
+            [value]="option"
+            >{{ option | titlecase }}</mat-option
+          >
+        </mat-select>
+      </mat-form-field>
+      <!-- email -->
+      <mat-form-field appearance="fill" class="col-span-2">
+        <mat-label>email</mat-label>
+        <input type="text" #emailElement matInput formControlName="email" />
+      </mat-form-field>
+      <!-- phone -->
+      <mat-form-field appearance="fill" class="col-span-2">
+        <mat-label>Phone</mat-label>
+        <input type="text" #phoneElement matInput formControlName="phone" />
+      </mat-form-field>
+      <!-- buttons -->
+      <article class="flex justify-end col-span-4 gap-x-1">
+        <button
+          type="button"
+          mat-stroked-button
+          color="primary"
+          (click)="back()">
+          Back
+        </button>
+        <button
+          type="button"
+          mat-stroked-button
+          color="primary"
+          (click)="save()">
+          Save
+        </button>
+      </article>
+    </section>
+  </form>
+</mat-card>

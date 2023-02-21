@@ -1,7 +1,17 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { appRoutes } from './app/app-routes';
+import { AppComponent } from './app/app.component';
+import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter } from '@angular/router';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { importProvidersFrom } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 
-import { AppModule } from './app/app.module';
-
-
-platformBrowserDynamic().bootstrapModule(AppModule)
-  .catch(err => console.error(err));
+bootstrapApplication(AppComponent, {
+  providers: [
+    provideRouter(appRoutes),
+    importProvidersFrom(BrowserAnimationsModule),
+    importProvidersFrom(HttpClientModule),
+    importProvidersFrom(MatSnackBarModule),
+  ],
+});

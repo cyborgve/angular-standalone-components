@@ -1,10 +1,41 @@
-# AngularStandalone
+# Angular Standalone - Material - Tailwind CSS
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.6.
+Angular based on Standalone Components
+
+- Angular 15.1.0
+- Angular Material 15.1.4
+- Tailwind CSS 3.2.6
+- ESlint 8.33.0
+- Concurrently 7.6.0
+- JSON-Server 0.17.1
+- Faker-JS 7.6.0
+- Prettier 2.8.4
+- Commitlint 17.4.3
+- Husky 8.0.3
+
+## Classic development server
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
 ## Development server
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Run `npm run dev` for a dev server with proxy configurated and automatic open default browser. The application will automatically reload if you change any of the source files.
+
+## Backend with Json-Server
+
+Run `npm run backend:json` for a backend json-server with faker data.
+
+## Development Server and Backend with Json-Server
+
+Run `npm run dev:json` for a dev server with proxy configurated and automatic open default browser. The application will automatically reload if you change any of the source files and backend json-server with faker data.
+
+## ESLint
+
+Run `npm run lint` execute check on code with ESLint.
+
+## ESLint Fix
+
+Run `npm run lint:fix` Fixed code with ESLint.
 
 ## Code scaffolding
 

@@ -1,0 +1,21 @@
+<h2 mat-dialog-title>
+  {{ 'Confirm deleting ' + data.entity }}
+</h2>
+<mat-dialog-content class="mat-typografy">
+  <p>
+    {{ 'Are you sure you want to delete ' + data.entity + ': ' + data.id }}
+  </p>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button type="button" color="primary" mat-stroked-button (click)="noOption()">
+    Cancel
+  </button>
+  <button
+    type="button"
+    color="warn"
+    mat-stroked-button
+    (click)="okOption()"
+    cdkFocusInitial>
+    Ok
+  </button>
+</mat-dialog-actions>

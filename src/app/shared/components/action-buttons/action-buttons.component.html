@@ -1,0 +1,26 @@
+<button
+  mat-icon-button
+  matTooltip="Edit"
+  class="p-0 m-0 hover:scale-125"
+  (click)="edit.emit()">
+  <mat-icon color="primary">tune</mat-icon>
+</button>
+<button
+  mat-icon-button
+  matTooltip="Delete"
+  class="p-0 m-0 hover:scale-125"
+  (click)="delete.emit()">
+  <mat-icon color="warn">delete</mat-icon>
+</button>
+<button
+  mat-icon-button
+  matTooltip="Enabled / Disabled"
+  class="p-0 m-0 hover:scale-125"
+  (click)="changeStatus.emit()">
+  <mat-icon class="text-green-600" *ngIf="status === 'ENABLED'; else toggleOff"
+    >toggle_on</mat-icon
+  >
+  <ng-template #toggleOff>
+    <mat-icon class="text-gray-300">toggle_off</mat-icon>
+  </ng-template>
+</button>
