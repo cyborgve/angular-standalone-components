@@ -2,6 +2,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
   name: 'uuidToId',
+  standalone: true,
 })
 export class UuidToIdPipe implements PipeTransform {
   transform(value: string): string {

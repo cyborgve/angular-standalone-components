@@ -19,11 +19,11 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatDialog, MatDialogModule } from '@angular/material/dialog';
 import { DATA_TABLE_COLUMNS } from '@core/constants/data-table-columns';
 import { ActionButtonsComponent } from '@shared/components/action-buttons/action-buttons.component';
-import { SharedModule } from '@shared/shared.module';
 import { Subscription, first, switchMap, take, Observable } from 'rxjs';
 import { Id } from '@core/utils/custom-types';
 import { Router } from '@angular/router';
 import { DeleteDialogComponent } from '@shared/components/delete-dialog/delete-dialog.component';
+import { UuidToIdPipe } from '@shared/pipes/uuid-to-id.pipe';
 
 @Component({
   standalone: true,
@@ -41,8 +41,8 @@ import { DeleteDialogComponent } from '@shared/components/delete-dialog/delete-d
     ActionButtonsComponent,
     DeleteDialogComponent,
     CommonModule,
-    SharedModule,
     DataTableHeaderComponent,
+    UuidToIdPipe,
   ],
 })
 export class UsersDataTableComponent implements AfterViewInit, OnDestroy {
