@@ -1,7 +1,7 @@
-FROM node:18-slim AS builder
+FROM node:18.4-slim AS builder
 WORKDIR /app
 COPY . .
-RUN npm i -g npm@9.4.2
+RUN npm i -g npm@9.6.1
 RUN npm ci && npm run build
 
 FROM nginx:alpine
